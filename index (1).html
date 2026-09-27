@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Matt Porter builds tools that spot threats and protect people: AI threat detection, privacy-first apps, and developer security tools.">
+<meta property="og:title" content="Matt Porter">
+<meta property="og:description" content="Matt Porter builds tools that spot threats and protect people: AI threat detection, privacy-first apps, and developer security tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mporter-7.github.io/">
+<title>Matt Porter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#101311; --surface:#171B18; --well:#0C0F0D;
+  --line:#262B27; --line-2:#3A403B;
+  --ink:#ECE8DF; --ink-2:#C9C4B8; --ink-3:#9A958A;
+  --accent:#F0B24A; --accent-hi:#FFD08A; --on-accent:#15130E;
+  --ok-bg:#1F3A2A; --ok:#8FE0AE;
+  --display:'Bricolage Grotesque',Georgia,serif;
+  --body:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hi)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,5vw,64px)}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:20px}
+.mark{display:flex;align-items:center;gap:10px;color:var(--ink);font:500 15px var(--mono)}
+.mark i{width:11px;height:11px;border-radius:3px;background:var(--accent);display:block}
+nav{display:flex;gap:clamp(14px,3vw,32px);flex-wrap:wrap;font-size:15px;font-weight:500}
+nav a{color:var(--ink-2);padding-block:8px}
+.hero{padding-block:clamp(56px,10vw,112px) clamp(48px,8vw,96px);display:flex;flex-direction:column;gap:24px}
+.eyebrow{font:500 13px var(--mono);letter-spacing:.08em;color:var(--accent)}
+h1{margin:0;font:700 clamp(44px,8vw,96px)/.98 var(--display);letter-spacing:-.03em;max-width:15ch;text-wrap:balance}
+.lede{margin:0;font-size:clamp(18px,2vw,21px);color:var(--ink-2);max-width:60ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:8px;font-weight:600;font-size:16px;border:1px solid var(--line-2);color:var(--ink)}
+.btn:hover{color:var(--ink);border-color:var(--ink-3)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{background:var(--accent-hi);color:var(--on-accent)}
+.btn.ghost{border-color:var(--accent);color:var(--accent)}
+.btn.todo{color:var(--ink-3);border-style:dashed;font-family:var(--mono);font-size:14px;font-weight:500}
+section.block{padding-block:0 clamp(56px,8vw,96px)}
+.head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:36px;margin-bottom:32px}
+h2{margin:0;font:700 clamp(32px,4vw,44px)/1.1 var(--display);letter-spacing:-.02em}
+.head span,.head a{font:500 14px var(--mono);color:var(--ink-3)}
+.head a{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px}
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:16px}
+.card.feature{grid-column:1/-1}
+.meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font:500 13px var(--mono);color:var(--ink-3)}
+.pill{padding:5px 11px;border-radius:999px;background:var(--ok-bg);color:var(--ok)}
+h3{margin:0;font:700 clamp(26px,3vw,34px)/1.15 var(--display);letter-spacing:-.02em}
+.feature h3{font-size:clamp(32px,4vw,44px)}
+.card p{margin:0;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;font:13px var(--mono);color:var(--ink-2)}
+.tags span{padding:5px 10px;border-radius:6px;border:1px solid #333933}
+.card .btns{margin-top:auto;padding-top:4px}
+.small h3{font-size:24px}
+.small p{font-size:16px}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 48px;border-top:1px solid var(--line);padding-top:36px}
+.about p{margin:0 0 16px;color:var(--ink-2);font-size:18px;max-width:62ch}
+.todo-text{color:var(--ink-3);font-family:var(--mono);font-size:15px}
+.contact{background:var(--accent);color:var(--on-accent);border-radius:16px;padding:clamp(28px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.contact h2{color:var(--on-accent)}
+.contact p{margin:8px 0 0;font-size:18px}
+.contact .btn{border:2px solid var(--on-accent);color:var(--on-accent)}
+.contact button.btn{background:none;font:inherit;font-weight:600;font-size:16px;cursor:pointer}
+.contact .btn.dark{user-select:all;background:var(--on-accent);color:var(--ink)}
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:28px;font:14px var(--mono);color:var(--ink-3)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="mark" href="#top"><i></i>Matt Porter</a>
+  <nav aria-label="Main">
+    <a href="#platforms">Platforms</a>
+    <a href="#store">Store</a>
+    <a href="#more">More tools</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">// SECURITY · AI · PRIVACY · WELLBEING</div>
+    <h1>Matt Porter builds tools that spot threats and protect people.</h1>
+    <p class="lede">Independent builder shipping AI threat detection, privacy-first apps, and developer security tools sold through my own store, Chosen Tech. Everything I've made, in one place.</p>
+    <div class="btns">
+      <a class="btn primary" href="#platforms">See the projects</a>
+      <a class="btn" href="https://chosentech7.myshopify.com">Chosen Tech store</a>
+      <a class="btn" href="https://github.com/MPorter-7">GitHub · MPorter-7</a>
+    </div>
+  </section>
+
+  <section class="block" id="platforms">
+    <div class="head"><h2>Platforms</h2><span>4 completed</span></div>
+    <div class="grid">
+      <article class="card feature">
+        <div class="meta"><span class="pill">● Completed</span>SaaS platform</div>
+        <h3>ThreatShield Alpha</h3>
+        <p>An AI-powered threat detection and behavioral intelligence platform. It watches for suspicious patterns and turns raw activity into clear, actionable threat insight.</p>
+        <div class="tags"><span>Claude AI</span><span>Supabase</span><span>Google + email sign-in</span></div>
+        <div class="btns"><a class="btn primary" href="https://threatshieldalpha.com">Visit threatshieldalpha.com →</a></div>
+      </article>
+    </div>
+    <div class="grid three" style="margin-top:24px">
+      <article class="card">
+        <div class="meta"><span class="pill">● Completed</span>Privacy app</div>
+        <h3>EchoTrace</h3>
+        <p>A privacy-first workspace for reconstructing your own digital history: a private timeline, guided public search, and full data export or deletion. Built for self-recovery, not surveillance.</p>
+        <div class="tags"><span>Supabase auth</span><span>Row-level security</span><span>Export / delete</span></div>
+        <div class="btns"><a class="btn ghost" href="https://echo-trace.com">echo-trace.com →</a><a class="btn" href="https://github.com/MPorter-7/echo-trace">GitHub</a></div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="pill">● Completed</span>Support community</div>
+        <h3>Anchor Path Life</h3>
+        <p>A place for people facing grief, anxiety, divorce, recovery, or caregiving, with guided pathways, coaching, a private journal, and a moderated community, so no one has to walk through it alone.</p>
+        <div class="tags"><span>React</span><span>Guided pathways</span><span>Community moderation</span></div>
+        <div class="btns"><a class="btn ghost" href="https://anchor-path.life/">anchor-path.life →</a></div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="pill">● Completed</span>Healing &amp; support</div>
+        <h3>HarborLight</h3>
+        <p>A quiet place to heal from trauma, grief, heartbreak, or emotional abuse. Twelve guided healing paths, a private journal, a boundaries tool, and a gentle guide that listens and reflects without diagnosing.</p>
+        <div class="tags"><span>Supabase</span><span>Private journal</span><span>Vercel</span></div>
+        <div class="btns"><a class="btn ghost" href="https://harbor-light.help">harbor-light.help →</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="store">
+    <div class="head"><h2>Security tools for developers</h2><a href="https://chosentech7.myshopify.com">Sold at Chosen Tech →</a></div>
+    <div class="grid">
+      <article class="card">
+        <div class="meta"><span class="pill">● Completed</span>Node.js · $99 one-time</div>
+        <h3>Universal Bot Detection System</h3>
+        <p>A production-ready bot detection engine that combines Cloudflare Turnstile verification, behavioral biometrics, and risk scoring to separate humans from bots.</p>
+        <div class="tags"><span>Cloudflare Turnstile</span><span>Fraud prevention</span><span>MIT license</span></div>
+        <div class="btns"><a class="btn primary" href="https://chosentech7.myshopify.com/products/universal-bot-detection-system-v1-0-0">Buy · $99 →</a></div>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="pill">● Completed</span>Web security · $29.99</div>
+        <h3>Security Headers Analyzer</h3>
+        <p>A lightweight defensive tool that checks a site's HTTP security headers, including Content-Security-Policy, Strict-Transport-Security and X-Frame-Options, and flags what's missing.</p>
+        <div class="tags"><span>HTTP headers</span><span>CSP · HSTS</span><span>Digital download</span></div>
+        <div class="btns"><a class="btn primary" href="https://chosentech7.myshopify.com/products/security-headers-analyzer-v1-0">Buy · $29.99 →</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="more">
+    <div class="head"><h2>More tools</h2><span>3 completed</span></div>
+    <div class="grid three">
+      <article class="card small">
+        <div class="meta"><span class="pill">● Completed</span>Bundle</div>
+        <h3>Dev Security Toolkit Bundle</h3>
+        <p>Bot Detection and the Security Headers Analyzer together in one purchase, with full source.</p>
+      </article>
+      <article class="card small">
+        <div class="meta"><span class="pill">● Completed</span>Forensics</div>
+        <h3>Mobile Forensic Extraction Suite</h3>
+        <p>A self-hosted mobile forensic acquisition and analysis workspace for investigators, deployed in your own environment.</p>
+      </article>
+      <article class="card small">
+        <div class="meta"><span class="pill">● Completed</span>Threat analysis</div>
+        <h3>Phishing &amp; URL Threat Analyzer</h3>
+        <p>Local, defensive triage for suspicious URLs that flags the common warning signs of phishing links.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="about">
+      <h2>About</h2>
+      <div>
+        <p>I'm a hands-on builder working across cybersecurity, AI, and OSINT. I design, code, and ship my own products end to end, from detection engines and bot defense to privacy tools that put people back in control of their data.</p>
+        <p>I'm open to opportunities that align with keeping people safe online and helping others.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="contact">
+      <div>
+        <h2>Let's talk.</h2>
+        <p>Questions about a product, a collaboration, or a project? Reach out.</p>
+      </div>
+      <div class="btns">
+        <a class="btn dark" href="mailto:matt.porter@echo-trace.com" id="email">matt.porter@echo-trace.com</a>
+        <button class="btn" type="button" id="copy-email">Copy email</button>
+        <a class="btn" href="https://github.com/MPorter-7">GitHub</a>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Matt Porter</span><span>Chosen Tech · Built independently</span></div></footer>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function(){
+  var b=this, e='matt.porter@echo-trace.com';
+  function done(t){b.textContent=t;setTimeout(function(){b.textContent='Copy email'},2000)}
+  try{navigator.clipboard.writeText(e).then(function(){done('Copied')},function(){sel()})}catch(x){sel()}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var w=getSelection();w.removeAllRanges();w.addRange(r);done('Selected, press Ctrl+C')}
+});
+</script>
+</body>
+</html>
